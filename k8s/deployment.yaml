@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thymeleaf-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: thymeleaf
+  template:
+    metadata:
+      labels:
+        app: thymeleaf
+    spec:
+      containers:
+        - name: thymeleaf
+          image: 059325865468.dkr.ecr.ap-south-1.amazonaws.com/thymeleaf-app:latest
+          ports:
+            - containerPort: 9090
