@@ -17,3 +17,4 @@ spec:
           image: 059325865468.dkr.ecr.ap-south-1.amazonaws.com/thymeleaf-app
           ports:
             - containerPort: 9090
+          imagePullPolicy: Always
